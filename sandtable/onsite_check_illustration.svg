@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="520" viewBox="0 0 960 520">
+  <rect width="960" height="520" fill="#ffffff"/>
+  <text x="40" y="45" font-size="28" font-family="Arial" fill="#111827">現場チェック図（成功 / 失敗 / 記録）</text>
+
+  <rect x="50" y="90" width="270" height="380" rx="12" fill="#ecfdf5" stroke="#16a34a"/>
+  <text x="75" y="125" font-size="20" font-family="Arial" fill="#166534">成功の見た目</text>
+  <text x="75" y="165" font-size="16" font-family="Arial" fill="#166534">• 線幅が一定</text>
+  <text x="75" y="195" font-size="16" font-family="Arial" fill="#166534">• 軌跡が途切れない</text>
+  <text x="75" y="225" font-size="16" font-family="Arial" fill="#166534">• 局所的な砂山なし</text>
+  <text x="75" y="255" font-size="16" font-family="Arial" fill="#166534">• 異音の周期なし</text>
+
+  <rect x="345" y="90" width="270" height="380" rx="12" fill="#fef2f2" stroke="#dc2626"/>
+  <text x="370" y="125" font-size="20" font-family="Arial" fill="#991b1b">失敗の見た目</text>
+  <text x="370" y="165" font-size="16" font-family="Arial" fill="#991b1b">• 一部だけ線が太い</text>
+  <text x="370" y="195" font-size="16" font-family="Arial" fill="#991b1b">• 角でズレる</text>
+  <text x="370" y="225" font-size="16" font-family="Arial" fill="#991b1b">• 長時間で劣化</text>
+  <text x="370" y="255" font-size="16" font-family="Arial" fill="#991b1b">• 跳ね/停止が発生</text>
+
+  <rect x="640" y="90" width="270" height="380" rx="12" fill="#eff6ff" stroke="#2563eb"/>
+  <text x="665" y="125" font-size="20" font-family="Arial" fill="#1e3a8a">記録ログ</text>
+  <text x="665" y="165" font-size="16" font-family="Arial" fill="#1e3a8a">• 日付</text>
+  <text x="665" y="195" font-size="16" font-family="Arial" fill="#1e3a8a">• 砂厚(mm)</text>
+  <text x="665" y="225" font-size="16" font-family="Arial" fill="#1e3a8a">• 磁石-アクリル距離(mm)</text>
+  <text x="665" y="255" font-size="16" font-family="Arial" fill="#1e3a8a">• GRBL主要値</text>
+  <text x="665" y="285" font-size="16" font-family="Arial" fill="#1e3a8a">• パターン名 / 症状</text>
+</svg>

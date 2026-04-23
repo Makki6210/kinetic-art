@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="520" viewBox="0 0 960 520">
+  <rect width="960" height="520" fill="#f9fafb"/>
+  <text x="40" y="45" font-size="28" font-family="Arial" fill="#111827">フェーズ進行ゲート（図解）</text>
+  <g font-family="Arial" font-size="15" fill="#111827">
+    <rect x="60" y="90" width="840" height="55" rx="8" fill="#dbeafe" stroke="#2563eb"/><text x="80" y="124">P1→P2: 全主要部材（3Dプリント含む）の納期確定</text>
+    <rect x="60" y="165" width="840" height="55" rx="8" fill="#dcfce7" stroke="#16a34a"/><text x="80" y="199">P2→P3: UGSでX/Yモーター単体駆動成功</text>
+    <rect x="60" y="240" width="840" height="55" rx="8" fill="#fef9c3" stroke="#ca8a04"/><text x="80" y="274">P3→P4: 砂なしでボール追従テスト成功</text>
+    <rect x="60" y="315" width="840" height="55" rx="8" fill="#fee2e2" stroke="#dc2626"/><text x="80" y="349">P4→P5: 砂投入後、手動Gコード描画を再現</text>
+    <rect x="60" y="390" width="840" height="55" rx="8" fill="#ede9fe" stroke="#7c3aed"/><text x="80" y="424">P5→P6: 潮汐API連動で自動切替が1日以上安定</text>
+  </g>
+</svg>

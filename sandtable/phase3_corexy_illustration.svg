@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="420" viewBox="0 0 960 420">
+  <rect width="960" height="420" fill="#f0fdf4"/>
+  <text x="40" y="45" font-size="28" font-family="Arial" fill="#14532d">フェーズ3: CoreXYベルト確認イメージ</text>
+
+  <rect x="120" y="80" width="500" height="300" fill="#fff" stroke="#16a34a" stroke-width="4"/>
+  <circle cx="150" cy="110" r="18" fill="#166534"/>
+  <circle cx="590" cy="110" r="18" fill="#166534"/>
+  <circle cx="150" cy="350" r="18" fill="#166534"/>
+  <circle cx="590" cy="350" r="18" fill="#166534"/>
+  <line x1="150" y1="110" x2="590" y2="350" stroke="#22c55e" stroke-width="4"/>
+  <line x1="590" y1="110" x2="150" y2="350" stroke="#22c55e" stroke-width="4"/>
+  <rect x="340" y="200" width="60" height="60" fill="#bbf7d0" stroke="#16a34a"/>
+  <text x="338" y="235" font-size="14" font-family="Arial" fill="#14532d">Carriage</text>
+
+  <rect x="650" y="90" width="250" height="290" rx="12" fill="#dcfce7" stroke="#22c55e"/>
+  <text x="675" y="125" font-size="20" font-family="Arial" fill="#14532d">確認ポイント</text>
+  <text x="675" y="160" font-size="16" font-family="Arial" fill="#14532d">✓ Xのみ直進</text>
+  <text x="675" y="190" font-size="16" font-family="Arial" fill="#14532d">✓ Yのみ直進</text>
+  <text x="675" y="220" font-size="16" font-family="Arial" fill="#14532d">✓ 斜め移動も軽い</text>
+  <text x="675" y="260" font-size="16" font-family="Arial" fill="#14532d">× 斜めに逃げる</text>
+  <text x="675" y="290" font-size="16" font-family="Arial" fill="#14532d">× 角で重くなる</text>
+  <text x="675" y="330" font-size="16" font-family="Arial" fill="#14532d">→ ベルト経路を再確認</text>
+</svg>

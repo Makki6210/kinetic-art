@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="420" viewBox="0 0 960 420">
+  <rect width="960" height="420" fill="#f8fafc"/>
+  <text x="40" y="45" font-size="28" font-family="Arial" fill="#334155">フェーズ4: アクリル設置〜砂投入イメージ</text>
+
+  <rect x="90" y="90" width="300" height="250" fill="#e2e8f0" stroke="#64748b"/>
+  <rect x="110" y="120" width="260" height="30" fill="#bfdbfe" stroke="#3b82f6"/>
+  <text x="130" y="140" font-size="14" font-family="Arial" fill="#1e3a8a">アクリル板</text>
+  <rect x="110" y="150" width="260" height="50" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="130" y="182" font-size="14" font-family="Arial" fill="#92400e">砂 8〜10mm</text>
+  <rect x="110" y="220" width="260" height="90" fill="#d1fae5" stroke="#10b981"/>
+  <text x="130" y="270" font-size="14" font-family="Arial" fill="#065f46">CoreXY空間</text>
+
+  <polygon points="430,220 490,220 490,205 525,235 490,265 490,250 430,250" fill="#64748b"/>
+
+  <rect x="550" y="90" width="330" height="250" rx="12" fill="#ffffff" stroke="#64748b"/>
+  <text x="575" y="130" font-size="20" font-family="Arial" fill="#0f172a">投入前チェック</text>
+  <text x="575" y="170" font-size="16" font-family="Arial" fill="#334155">1. キャリッジ全域干渉なし</text>
+  <text x="575" y="200" font-size="16" font-family="Arial" fill="#334155">2. LED点灯テストOK</text>
+  <text x="575" y="230" font-size="16" font-family="Arial" fill="#334155">3. 水準器で水平OK</text>
+  <text x="575" y="260" font-size="16" font-family="Arial" fill="#334155">4. 砂を均一に敷く</text>
+  <text x="575" y="300" font-size="16" font-family="Arial" fill="#334155">偏り=傾きのサイン</text>
+</svg>

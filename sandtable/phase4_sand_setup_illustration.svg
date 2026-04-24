@@ -1,22 +1,162 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="960" height="420" viewBox="0 0 960 420">
-  <rect width="960" height="420" fill="#f8fafc"/>
-  <text x="40" y="45" font-size="28" font-family="Arial" fill="#334155">フェーズ4: アクリル設置〜砂投入イメージ</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="570" viewBox="0 0 960 570">
+  <rect width="960" height="570" fill="#f8fafc"/>
+  <text x="480" y="36" text-anchor="middle" font-size="20" font-weight="bold" font-family="Arial,sans-serif" fill="#0f172a">フェーズ4：テーブル組立の4ステップ（断面図）</text>
 
-  <rect x="90" y="90" width="300" height="250" fill="#e2e8f0" stroke="#64748b"/>
-  <rect x="110" y="120" width="260" height="30" fill="#bfdbfe" stroke="#3b82f6"/>
-  <text x="130" y="140" font-size="14" font-family="Arial" fill="#1e3a8a">アクリル板</text>
-  <rect x="110" y="150" width="260" height="50" fill="#fef3c7" stroke="#f59e0b"/>
-  <text x="130" y="182" font-size="14" font-family="Arial" fill="#92400e">砂 8〜10mm</text>
-  <rect x="110" y="220" width="260" height="90" fill="#d1fae5" stroke="#10b981"/>
-  <text x="130" y="270" font-size="14" font-family="Arial" fill="#065f46">CoreXY空間</text>
+  <!-- ========== STEP 1: Empty wooden frame ========== -->
+  <rect x="15" y="55" width="220" height="250" rx="8" fill="#fefce8" stroke="#ca8a04" stroke-width="1.5"/>
+  <text x="125" y="75" text-anchor="middle" font-size="12" font-weight="bold" font-family="Arial,sans-serif" fill="#78350f">STEP 1</text>
+  <text x="125" y="92" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#92400e">木枠の組立・底板固定</text>
 
-  <polygon points="430,220 490,220 490,205 525,235 490,265 490,250 430,250" fill="#64748b"/>
+  <!-- Step 1: Cross section - empty box -->
+  <!-- Left wall -->
+  <rect x="45" y="108" width="16" height="155" rx="2" fill="#92400e"/>
+  <!-- Right wall -->
+  <rect x="190" y="108" width="16" height="155" rx="2" fill="#92400e"/>
+  <!-- Bottom board -->
+  <rect x="45" y="255" width="161" height="14" rx="1" fill="#a16207"/>
+  <!-- Empty interior label -->
+  <text x="125" y="185" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#94a3b8">（内部空）</text>
+  <!-- Screw indicators -->
+  <circle cx="58" cy="255" r="3" fill="#fbbf24"/>
+  <circle cx="75" cy="255" r="3" fill="#fbbf24"/>
+  <circle cx="173" cy="255" r="3" fill="#fbbf24"/>
+  <circle cx="190" cy="255" r="3" fill="#fbbf24"/>
+  <text x="125" y="298" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#64748b">木ネジで四隅を固定</text>
+  <!-- Checkmark -->
+  <text x="125" y="318" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#16a34a">✓ スコヤで直角を確認</text>
 
-  <rect x="550" y="90" width="330" height="250" rx="12" fill="#ffffff" stroke="#64748b"/>
-  <text x="575" y="130" font-size="20" font-family="Arial" fill="#0f172a">投入前チェック</text>
-  <text x="575" y="170" font-size="16" font-family="Arial" fill="#334155">1. キャリッジ全域干渉なし</text>
-  <text x="575" y="200" font-size="16" font-family="Arial" fill="#334155">2. LED点灯テストOK</text>
-  <text x="575" y="230" font-size="16" font-family="Arial" fill="#334155">3. 水準器で水平OK</text>
-  <text x="575" y="260" font-size="16" font-family="Arial" fill="#334155">4. 砂を均一に敷く</text>
-  <text x="575" y="300" font-size="16" font-family="Arial" fill="#334155">偏り=傾きのサイン</text>
+  <!-- Arrow 1→2 -->
+  <polygon points="243,170 265,155 265,185" fill="#64748b"/>
+
+  <!-- ========== STEP 2: CoreXY mechanism inside ========== -->
+  <rect x="255" y="55" width="220" height="250" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="365" y="75" text-anchor="middle" font-size="12" font-weight="bold" font-family="Arial,sans-serif" fill="#14532d">STEP 2</text>
+  <text x="365" y="92" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#166534">CoreXYメカ取り付け</text>
+
+  <!-- Step 2: Frame + CoreXY inside -->
+  <rect x="285" y="108" width="16" height="155" rx="2" fill="#92400e"/>
+  <rect x="430" y="108" width="16" height="155" rx="2" fill="#92400e"/>
+  <rect x="285" y="255" width="161" height="14" rx="1" fill="#a16207"/>
+  <!-- V-Slot rails inside -->
+  <rect x="301" y="218" width="129" height="10" rx="2" fill="#b0b0b0" stroke="#999" stroke-width="0.5"/>
+  <!-- Carriage block -->
+  <rect x="335" y="178" width="60" height="40" rx="3" fill="#4b5563" stroke="#1f2937" stroke-width="1"/>
+  <text x="365" y="200" text-anchor="middle" font-size="9" font-family="Arial,sans-serif" fill="#e5e7eb">キャリッジ</text>
+  <!-- Magnet below carriage -->
+  <rect x="345" y="218" width="40" height="8" rx="1" fill="#dc2626" stroke="#991b1b"/>
+  <!-- Belt dashes -->
+  <line x1="301" y1="194" x2="335" y2="194" stroke="#333" stroke-width="1.5" stroke-dasharray="4 2" opacity="0.6"/>
+  <line x1="395" y1="194" x2="430" y2="194" stroke="#333" stroke-width="1.5" stroke-dasharray="4 2" opacity="0.6"/>
+  <!-- Motor left -->
+  <rect x="285" y="150" width="28" height="28" rx="2" fill="#555" stroke="#333"/>
+  <circle cx="299" cy="164" r="5" fill="#777"/>
+  <!-- Motor right -->
+  <rect x="432" y="150" width="14" height="28" rx="2" fill="#555" stroke="#333"/>
+  <text x="365" y="298" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#64748b">V-Slotフレームに</text>
+  <text x="365" y="313" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#64748b">モーター・ベルト取付</text>
+
+  <!-- Arrow 2→3 -->
+  <polygon points="483,170 505,155 505,185" fill="#64748b"/>
+
+  <!-- ========== STEP 3: Acrylic plate + middle shelf ========== -->
+  <rect x="495" y="55" width="220" height="250" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="605" y="75" text-anchor="middle" font-size="12" font-weight="bold" font-family="Arial,sans-serif" fill="#1e3a8a">STEP 3</text>
+  <text x="605" y="92" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#1d4ed8">中間棚板＋アクリル設置</text>
+
+  <!-- Step 3: Frame + CoreXY + Acrylic -->
+  <rect x="525" y="108" width="16" height="155" rx="2" fill="#92400e"/>
+  <rect x="670" y="108" width="16" height="155" rx="2" fill="#92400e"/>
+  <rect x="525" y="255" width="161" height="14" rx="1" fill="#a16207"/>
+  <!-- Middle shelf (L-bracket support) -->
+  <rect x="525" y="155" width="8" height="6" fill="#888"/>
+  <rect x="668" y="155" width="8" height="6" fill="#888"/>
+  <!-- Acrylic plate (on shelf) -->
+  <rect x="533" y="148" width="134" height="8" rx="1" fill="#bfdbfe" opacity="0.9" stroke="#60a5fa" stroke-width="1"/>
+  <text x="600" y="145" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#1d4ed8">アクリル板 3mm</text>
+  <!-- CoreXY below -->
+  <rect x="541" y="218" width="118" height="8" rx="2" fill="#b0b0b0" stroke="#999" stroke-width="0.5"/>
+  <rect x="560" y="180" width="55" height="38" rx="2" fill="#4b5563" stroke="#1f2937"/>
+  <rect x="570" y="218" width="35" height="7" rx="1" fill="#dc2626"/>
+  <!-- Felt tape indicator -->
+  <rect x="533" y="154" width="134" height="4" fill="#6b7280" opacity="0.5"/>
+  <text x="600" y="298" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#64748b">フェルトテープで</text>
+  <text x="600" y="313" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#64748b">防振・シール処理</text>
+
+  <!-- Arrow 3→4 -->
+  <polygon points="723,170 745,155 745,185" fill="#64748b"/>
+
+  <!-- ========== STEP 4: Sand + LED (complete) ========== -->
+  <rect x="735" y="55" width="210" height="250" rx="8" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+  <text x="840" y="75" text-anchor="middle" font-size="12" font-weight="bold" font-family="Arial,sans-serif" fill="#78350f">STEP 4</text>
+  <text x="840" y="92" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#92400e">砂投入＋LED取付（完成）</text>
+
+  <!-- Step 4: Complete table cross section -->
+  <rect x="762" y="108" width="16" height="155" rx="2" fill="#92400e"/>
+  <rect x="907" y="108" width="16" height="155" rx="2" fill="#92400e"/>
+  <rect x="762" y="255" width="161" height="14" rx="1" fill="#a16207"/>
+  <!-- NeoPixel LEDs on inner walls -->
+  <rect x="778" y="110" width="4" height="38" rx="1" fill="#0066FF" opacity="0.8"/>
+  <rect x="903" y="110" width="4" height="38" rx="1" fill="#0066FF" opacity="0.8"/>
+  <!-- LED glow -->
+  <rect x="782" y="110" width="14" height="38" fill="#0066FF" opacity="0.08"/>
+  <rect x="889" y="110" width="14" height="38" fill="#0066FF" opacity="0.08"/>
+  <!-- Sand layer -->
+  <rect x="782" y="108" width="121" height="32" fill="#e8dcc8"/>
+  <line x1="782" y1="108" x2="903" y2="108" stroke="#c4ad8a" stroke-width="1.5"/>
+  <!-- Ball on sand -->
+  <circle cx="870" cy="114" r="8" fill="#c0c0c0" stroke="#888" stroke-width="1"/>
+  <!-- Acrylic -->
+  <rect x="782" y="140" width="121" height="7" fill="#bfdbfe" opacity="0.85" stroke="#60a5fa" stroke-width="0.5"/>
+  <!-- CoreXY below -->
+  <rect x="782" y="147" width="121" height="108" fill="#f1f5f9" stroke="#94a3b8" stroke-width="0.5" stroke-dasharray="4 3"/>
+  <!-- Spirit level indicator -->
+  <text x="840" y="298" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#64748b">水準器で水平確認</text>
+  <text x="840" y="313" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#16a34a">✓ 完成状態</text>
+
+  <!-- ========== BOTTOM: Key checks ========== -->
+  <rect x="15" y="318" width="930" height="240" rx="8" fill="#fff" stroke="#94a3b8" stroke-width="1"/>
+  <text x="480" y="340" text-anchor="middle" font-size="14" font-weight="bold" font-family="Arial,sans-serif" fill="#1e293b">砂投入前の必須チェックリスト</text>
+
+  <!-- Check col 1 -->
+  <rect x="30" y="355" width="215" height="188" rx="6" fill="#f0fdf4" stroke="#16a34a" stroke-width="1"/>
+  <text x="137" y="374" text-anchor="middle" font-size="12" font-weight="bold" font-family="Arial,sans-serif" fill="#14532d">メカニクス確認</text>
+  <text x="45" y="398" font-size="11" font-family="Arial,sans-serif" fill="#166534">☐ キャリッジが全域干渉なし</text>
+  <text x="45" y="420" font-size="11" font-family="Arial,sans-serif" fill="#166534">☐ アクリルとキャリッジが</text>
+  <text x="57" y="436" font-size="11" font-family="Arial,sans-serif" fill="#166534">　 3〜5mm の隙間</text>
+  <text x="45" y="456" font-size="11" font-family="Arial,sans-serif" fill="#166534">☐ 磁石でボール追従OK</text>
+  <text x="45" y="476" font-size="11" font-family="Arial,sans-serif" fill="#166534">☐ ホーミング（$H）成功</text>
+  <text x="45" y="496" font-size="11" font-family="Arial,sans-serif" fill="#166534">☐ 四隅まで直進OK</text>
+
+  <!-- Check col 2 -->
+  <rect x="258" y="355" width="215" height="188" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1"/>
+  <text x="365" y="374" text-anchor="middle" font-size="12" font-weight="bold" font-family="Arial,sans-serif" fill="#1e3a8a">電装確認</text>
+  <text x="273" y="398" font-size="11" font-family="Arial,sans-serif" fill="#1e40af">☐ LED 点灯テスト OK</text>
+  <text x="273" y="420" font-size="11" font-family="Arial,sans-serif" fill="#1e40af">☐ モーター異音なし</text>
+  <text x="273" y="442" font-size="11" font-family="Arial,sans-serif" fill="#1e40af">☐ ドライバー発熱なし</text>
+  <text x="273" y="464" font-size="11" font-family="Arial,sans-serif" fill="#1e40af">☐ USB→RPi 通信OK</text>
+  <text x="273" y="486" font-size="11" font-family="Arial,sans-serif" fill="#1e40af">☐ 電源ケーブル経路が</text>
+  <text x="285" y="502" font-size="11" font-family="Arial,sans-serif" fill="#1e40af">　 可動部に干渉しない</text>
+
+  <!-- Check col 3 -->
+  <rect x="486" y="355" width="215" height="188" rx="6" fill="#fef9c3" stroke="#ca8a04" stroke-width="1"/>
+  <text x="593" y="374" text-anchor="middle" font-size="12" font-weight="bold" font-family="Arial,sans-serif" fill="#78350f">木工・水平確認</text>
+  <text x="501" y="398" font-size="11" font-family="Arial,sans-serif" fill="#713f12">☐ 水準器で4辺の水平OK</text>
+  <text x="501" y="420" font-size="11" font-family="Arial,sans-serif" fill="#713f12">☐ アクリルとフレームの</text>
+  <text x="513" y="436" font-size="11" font-family="Arial,sans-serif" fill="#713f12">　 隙間をシリコンシール</text>
+  <text x="501" y="456" font-size="11" font-family="Arial,sans-serif" fill="#713f12">☐ 塗装・ニス乾燥済み</text>
+  <text x="501" y="476" font-size="11" font-family="Arial,sans-serif" fill="#713f12">☐ 脚のアジャスターで</text>
+  <text x="513" y="492" font-size="11" font-family="Arial,sans-serif" fill="#713f12">　 最終水平調整</text>
+
+  <!-- Sand pouring tip -->
+  <rect x="714" y="355" width="220" height="188" rx="6" fill="#fef2f2" stroke="#dc2626" stroke-width="1"/>
+  <text x="824" y="374" text-anchor="middle" font-size="12" font-weight="bold" font-family="Arial,sans-serif" fill="#991b1b">砂投入のコツ</text>
+  <text x="726" y="396" font-size="11" font-family="Arial,sans-serif" fill="#7f1d1d">目標 10mm 厚で均一に敷く</text>
+  <!-- Sand depth indicator -->
+  <rect x="726" y="410" width="80" height="30" fill="#e8dcc8" stroke="#c4ad8a"/>
+  <line x1="726" y1="420" x2="806" y2="420" stroke="#c4ad8a" stroke-width="1" stroke-dasharray="3 2" opacity="0.7"/>
+  <text x="726" y="408" font-size="9" font-family="Arial,sans-serif" fill="#6b5a3e">←10mm→</text>
+  <text x="726" y="452" font-size="11" font-family="Arial,sans-serif" fill="#7f1d1d">薄すぎ → 磁石がボールを</text>
+  <text x="726" y="468" font-size="11" font-family="Arial,sans-serif" fill="#7f1d1d">アクリルに押し付ける</text>
+  <text x="726" y="488" font-size="11" font-family="Arial,sans-serif" fill="#7f1d1d">厚すぎ → 磁力が届かない</text>
+  <text x="726" y="508" font-size="11" font-family="Arial,sans-serif" fill="#7f1d1d">→ 後で調整可能</text>
 </svg>

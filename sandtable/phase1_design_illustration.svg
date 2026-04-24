@@ -1,25 +1,166 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="960" height="420" viewBox="0 0 960 420">
-  <rect width="960" height="420" fill="#f7fafc"/>
-  <text x="40" y="45" font-size="28" font-family="Arial" fill="#1f2937">フェーズ1: 設計・調達イメージ</text>
-  <rect x="40" y="80" width="280" height="280" rx="12" fill="#e0f2fe" stroke="#0284c7"/>
-  <text x="70" y="120" font-size="22" font-family="Arial" fill="#0c4a6e">設計図</text>
-  <rect x="80" y="145" width="200" height="150" fill="#fff" stroke="#0ea5e9"/>
-  <line x1="95" y1="175" x2="265" y2="175" stroke="#94a3b8"/>
-  <line x1="95" y1="210" x2="265" y2="210" stroke="#94a3b8"/>
-  <line x1="95" y1="245" x2="265" y2="245" stroke="#94a3b8"/>
-  <text x="95" y="320" font-size="16" font-family="Arial" fill="#075985">寸法を先に確定</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="570" viewBox="0 0 960 570">
+  <rect width="960" height="570" fill="#f8fafc"/>
+  <text x="480" y="36" text-anchor="middle" font-size="20" font-weight="bold" font-family="Arial,sans-serif" fill="#1e293b">フェーズ1：テーブル設計の全体像と発注優先順位</text>
 
-  <polygon points="340,220 400,220 400,205 435,235 400,265 400,250 340,250" fill="#64748b"/>
+  <!-- ===== LEFT PANEL: Table cross-section ===== -->
+  <rect x="15" y="55" width="450" height="500" rx="10" fill="#fffbeb" stroke="#d97706" stroke-width="1.5"/>
+  <text x="240" y="80" text-anchor="middle" font-size="14" font-weight="bold" font-family="Arial,sans-serif" fill="#92400e">① テーブル断面（この構造を設計する）</text>
 
-  <rect x="460" y="80" width="460" height="280" rx="12" fill="#ecfccb" stroke="#65a30d"/>
-  <text x="490" y="120" font-size="22" font-family="Arial" fill="#3f6212">部品到着の見た目</text>
-  <rect x="500" y="145" width="120" height="80" fill="#fff" stroke="#84cc16"/>
-  <text x="520" y="190" font-size="14" font-family="Arial" fill="#365314">V-Slot</text>
-  <rect x="640" y="145" width="120" height="80" fill="#fff" stroke="#84cc16"/>
-  <text x="665" y="190" font-size="14" font-family="Arial" fill="#365314">NEMA17</text>
-  <rect x="780" y="145" width="120" height="80" fill="#fff" stroke="#84cc16"/>
-  <text x="805" y="190" font-size="14" font-family="Arial" fill="#365314">TMC2209</text>
-  <rect x="500" y="245" width="400" height="90" fill="#fff" stroke="#84cc16"/>
-  <text x="520" y="278" font-size="18" font-family="Arial" fill="#365314">チェック:</text>
-  <text x="520" y="305" font-size="16" font-family="Arial" fill="#365314">3Dプリント納期 / アクリル寸法 / 電源仕様</text>
+  <!-- Outer wooden frame -->
+  <!-- Left wall -->
+  <rect x="75" y="108" width="22" height="340" rx="2" fill="#92400e" stroke="#78350f" stroke-width="1"/>
+  <!-- Right wall -->
+  <rect x="353" y="108" width="22" height="340" rx="2" fill="#92400e" stroke="#78350f" stroke-width="1"/>
+  <!-- Bottom board (plywood) -->
+  <rect x="75" y="432" width="300" height="18" rx="2" fill="#a16207" stroke="#78350f" stroke-width="1"/>
+
+  <!-- Layer labels (left side) -->
+  <!-- Width bracket for 400mm drawing area -->
+  <line x1="97" y1="100" x2="353" y2="100" stroke="#d97706" stroke-width="1"/>
+  <line x1="97" y1="96" x2="97" y2="104" stroke="#d97706" stroke-width="1"/>
+  <line x1="353" y1="96" x2="353" y2="104" stroke="#d97706" stroke-width="1"/>
+  <text x="225" y="97" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#d97706">描画エリア内寸 400mm</text>
+
+  <!-- Layer 1: Sand (10mm) -->
+  <rect x="97" y="108" width="256" height="30" fill="#e8dcc8"/>
+  <line x1="97" y1="108" x2="353" y2="108" stroke="#c4ad8a" stroke-width="2"/>
+  <!-- Steel ball sitting on sand -->
+  <circle cx="290" cy="115" r="10" fill="url(#ballGrad1)" stroke="#888" stroke-width="1"/>
+  <circle cx="287" cy="112" r="3" fill="#eee" opacity="0.7"/>
+  <text x="185" y="129" text-anchor="middle" font-size="12" font-family="Arial,sans-serif" fill="#6b5a3e">白砂（珪砂）10mm</text>
+  <!-- Right bracket -->
+  <line x1="360" y1="108" x2="378" y2="108" stroke="#64748b" stroke-width="1"/>
+  <line x1="360" y1="138" x2="378" y2="138" stroke="#64748b" stroke-width="1"/>
+  <line x1="378" y1="108" x2="378" y2="138" stroke="#64748b" stroke-width="1"/>
+  <text x="385" y="128" font-size="11" font-family="Arial,sans-serif" fill="#475569">10mm</text>
+
+  <!-- Layer 2: Acrylic plate (3mm) -->
+  <rect x="97" y="138" width="256" height="9" fill="#bfdbfe" opacity="0.9"/>
+  <line x1="97" y1="138" x2="353" y2="138" stroke="#60a5fa" stroke-width="1.5"/>
+  <line x1="97" y1="147" x2="353" y2="147" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="185" y="146" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#1d4ed8">アクリル板（透明・3mm）</text>
+  <line x1="360" y1="138" x2="378" y2="138" stroke="#64748b" stroke-width="1"/>
+  <line x1="360" y1="147" x2="378" y2="147" stroke="#64748b" stroke-width="1"/>
+  <line x1="378" y1="138" x2="378" y2="147" stroke="#64748b" stroke-width="1"/>
+  <text x="385" y="147" font-size="11" font-family="Arial,sans-serif" fill="#475569">3mm</text>
+
+  <!-- Magnetic field arrow -->
+  <line x1="295" y1="147" x2="295" y2="220" stroke="#ef4444" stroke-width="1" stroke-dasharray="4 3" opacity="0.7"/>
+  <polygon points="291,145 299,145 295,138" fill="#ef4444" opacity="0.7"/>
+  <polygon points="291,225 299,225 295,232" fill="#ef4444" opacity="0.7"/>
+  <text x="305" y="192" font-size="10" font-family="Arial,sans-serif" fill="#ef4444">磁力</text>
+
+  <!-- Layer 3: CoreXY space (60mm) -->
+  <rect x="97" y="147" width="256" height="168" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1" stroke-dasharray="5 4"/>
+  <text x="155" y="196" font-size="12" font-family="Arial,sans-serif" fill="#475569">CoreXY 可動空間</text>
+  <text x="165" y="212" font-size="12" font-family="Arial,sans-serif" fill="#94a3b8">（高さ 約60mm）</text>
+  <!-- Carriage with magnet -->
+  <rect x="168" y="220" width="85" height="48" rx="4" fill="#718096" stroke="#4a5568" stroke-width="1.2"/>
+  <text x="210" y="240" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#fff">Xキャリッジ</text>
+  <rect x="183" y="244" width="55" height="13" rx="2" fill="#444" stroke="#666"/>
+  <text x="210" y="254" text-anchor="middle" font-size="9" font-family="Arial,sans-serif" fill="#ddd">ネオジム磁石 N52</text>
+  <!-- GT2 Belt lines -->
+  <line x1="97" y1="244" x2="168" y2="244" stroke="#333" stroke-width="2" stroke-dasharray="5 3" opacity="0.55"/>
+  <line x1="253" y1="244" x2="353" y2="244" stroke="#333" stroke-width="2" stroke-dasharray="5 3" opacity="0.55"/>
+  <!-- Motor block (left) -->
+  <rect x="97" y="278" width="38" height="38" rx="2" fill="#555" stroke="#333" stroke-width="1"/>
+  <circle cx="116" cy="297" r="6" fill="#777"/>
+  <circle cx="116" cy="297" r="2.5" fill="#999"/>
+  <text x="116" y="325" text-anchor="middle" font-size="9" font-family="Arial,sans-serif" fill="#666">NEMA17</text>
+  <!-- Motor block (right) -->
+  <rect x="318" y="278" width="35" height="38" rx="2" fill="#555" stroke="#333" stroke-width="1"/>
+  <circle cx="335" cy="297" r="6" fill="#777"/>
+  <circle cx="335" cy="297" r="2.5" fill="#999"/>
+
+  <!-- Layer 3 right bracket -->
+  <line x1="360" y1="147" x2="378" y2="147" stroke="#64748b" stroke-width="1"/>
+  <line x1="360" y1="315" x2="378" y2="315" stroke="#64748b" stroke-width="1"/>
+  <line x1="378" y1="147" x2="378" y2="315" stroke="#64748b" stroke-width="1"/>
+  <text x="385" y="232" font-size="11" font-family="Arial,sans-serif" fill="#475569">60mm</text>
+
+  <!-- Layer 4: Electronics (bottom) -->
+  <rect x="97" y="315" width="256" height="117" fill="#dbeafe"/>
+  <!-- RPi -->
+  <rect x="108" y="330" width="62" height="38" rx="2" fill="#2d8b3e" stroke="#1a5c26" stroke-width="1"/>
+  <text x="139" y="350" text-anchor="middle" font-size="9" font-family="Arial,sans-serif" fill="#fff">Raspberry</text>
+  <text x="139" y="362" text-anchor="middle" font-size="9" font-family="Arial,sans-serif" fill="#fff">Pi 4</text>
+  <!-- Arduino -->
+  <rect x="180" y="330" width="58" height="38" rx="2" fill="#0066aa" stroke="#004477" stroke-width="1"/>
+  <text x="209" y="350" text-anchor="middle" font-size="9" font-family="Arial,sans-serif" fill="#fff">Arduino</text>
+  <text x="209" y="362" text-anchor="middle" font-size="9" font-family="Arial,sans-serif" fill="#fff">+GRBL</text>
+  <!-- PSU -->
+  <rect x="248" y="330" width="62" height="38" rx="2" fill="#444" stroke="#333" stroke-width="1"/>
+  <text x="279" y="350" text-anchor="middle" font-size="9" font-family="Arial,sans-serif" fill="#ccc">24V 5A</text>
+  <text x="279" y="362" text-anchor="middle" font-size="9" font-family="Arial,sans-serif" fill="#ccc">電源</text>
+  <!-- USB line -->
+  <line x1="170" y1="349" x2="180" y2="349" stroke="#888" stroke-width="1.5" stroke-dasharray="3 2"/>
+  <text x="175" y="344" text-anchor="middle" font-size="7" font-family="Arial,sans-serif" fill="#94a3b8">USB</text>
+  <text x="225" y="395" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#1e40af">電装層（合板底板の上）</text>
+
+  <!-- Layer 4 right bracket -->
+  <line x1="360" y1="315" x2="378" y2="315" stroke="#64748b" stroke-width="1"/>
+  <line x1="360" y1="432" x2="378" y2="432" stroke="#64748b" stroke-width="1"/>
+  <line x1="378" y1="315" x2="378" y2="432" stroke="#64748b" stroke-width="1"/>
+  <text x="385" y="374" font-size="11" font-family="Arial,sans-serif" fill="#475569">合板</text>
+  <text x="385" y="387" font-size="11" font-family="Arial,sans-serif" fill="#475569">9mm+</text>
+
+  <!-- Total height bracket (left) -->
+  <line x1="55" y1="108" x2="72" y2="108" stroke="#374151" stroke-width="1"/>
+  <line x1="55" y1="450" x2="72" y2="450" stroke="#374151" stroke-width="1"/>
+  <line x1="55" y1="108" x2="55" y2="450" stroke="#374151" stroke-width="1.5"/>
+  <text x="48" y="288" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#374151" transform="rotate(-90,48,288)">高さ 約150mm</text>
+
+  <!-- Bottom width annotation -->
+  <line x1="75" y1="462" x2="375" y2="462" stroke="#374151" stroke-width="1"/>
+  <line x1="75" y1="456" x2="75" y2="468" stroke="#374151" stroke-width="1"/>
+  <line x1="375" y1="456" x2="375" y2="468" stroke="#374151" stroke-width="1"/>
+  <text x="225" y="480" text-anchor="middle" font-size="12" font-family="Arial,sans-serif" fill="#374151">外寸 約550mm（木枠含む）</text>
+
+  <!-- Gradient defs -->
+  <defs>
+    <radialGradient id="ballGrad1" cx="35%" cy="35%" r="60%">
+      <stop offset="0%" stop-color="#e8e8e8"/>
+      <stop offset="100%" stop-color="#a0a0a0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- ===== RIGHT PANEL: Ordering priority ===== -->
+  <rect x="490" y="55" width="455" height="500" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="712" y="80" text-anchor="middle" font-size="14" font-weight="bold" font-family="Arial,sans-serif" fill="#14532d">② 発注優先順位（初日に全て着手する）</text>
+
+  <!-- Priority 1: 3D Print - CRITICAL -->
+  <rect x="510" y="95" width="414" height="100" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <rect x="510" y="95" width="8" height="100" rx="4" fill="#dc2626"/>
+  <!-- Warning icon -->
+  <polygon points="530,107 548,107 539,93" fill="#dc2626"/>
+  <text x="539" y="106" text-anchor="middle" font-size="9" font-family="Arial,sans-serif" fill="#fff">!</text>
+  <text x="557" y="116" font-size="13" font-weight="bold" font-family="Arial,sans-serif" fill="#b91c1c">最優先 ★ 初日・当日に発注</text>
+  <text x="525" y="140" font-size="12" font-family="Arial,sans-serif" fill="#7f1d1d">3Dプリント部品（DMM.make / JLCPCB）</text>
+  <text x="525" y="160" font-size="11" font-family="Arial,sans-serif" fill="#991b1b">納期：5〜7営業日 ← 全工程で最長のリードタイム</text>
+  <text x="525" y="178" font-size="11" font-family="Arial,sans-serif" fill="#991b1b">遅らせると後続フェーズが全て1週間遅れる</text>
+
+  <!-- Priority 2: Online mechanical -->
+  <rect x="510" y="210" width="414" height="120" rx="8" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.5"/>
+  <rect x="510" y="210" width="8" height="120" rx="4" fill="#ca8a04"/>
+  <text x="525" y="232" font-size="13" font-weight="bold" font-family="Arial,sans-serif" fill="#78350f">高優先  初日〜2日以内 / Amazon・AliEx</text>
+  <text x="525" y="255" font-size="12" font-family="Arial,sans-serif" fill="#713f12">• V-Slot 2020 アルミフレーム（500mm×4・450mm×1）</text>
+  <text x="525" y="275" font-size="12" font-family="Arial,sans-serif" fill="#713f12">• NEMA17 ステッピングモーター × 2</text>
+  <text x="525" y="295" font-size="12" font-family="Arial,sans-serif" fill="#713f12">• TMC2209 ドライバー × 2、GT2ベルト・プーリー類</text>
+  <text x="525" y="315" font-size="12" font-family="Arial,sans-serif" fill="#713f12">• ネオジム磁石 N52 φ12mm、クロム鋼球 φ16mm</text>
+
+  <!-- Priority 3: Electronics -->
+  <rect x="510" y="345" width="414" height="100" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <rect x="510" y="345" width="8" height="100" rx="4" fill="#2563eb"/>
+  <text x="525" y="368" font-size="13" font-weight="bold" font-family="Arial,sans-serif" fill="#1e3a8a">通常  2〜3日以内 / Amazon</text>
+  <text x="525" y="390" font-size="12" font-family="Arial,sans-serif" fill="#1e40af">• Arduino Uno（互換品可） + CNC Shield v3</text>
+  <text x="525" y="410" font-size="12" font-family="Arial,sans-serif" fill="#1e40af">• 24V 5A 電源アダプター</text>
+  <text x="525" y="430" font-size="12" font-family="Arial,sans-serif" fill="#1e40af">• WS2812B NeoPixel ストリップ 1m</text>
+
+  <!-- Priority 4: Home center -->
+  <rect x="510" y="460" width="414" height="85" rx="8" fill="#f3f4f6" stroke="#9ca3af" stroke-width="1.5"/>
+  <rect x="510" y="460" width="8" height="85" rx="4" fill="#9ca3af"/>
+  <text x="525" y="483" font-size="13" font-weight="bold" font-family="Arial,sans-serif" fill="#374151">部品待ち期間中に購入  ホームセンター</text>
+  <text x="525" y="503" font-size="12" font-family="Arial,sans-serif" fill="#4b5563">• シナ合板 9mm（600×600mm × 2枚）・パイン角材</text>
+  <text x="525" y="523" font-size="12" font-family="Arial,sans-serif" fill="#4b5563">• キャスト・アクリル板 3mm（はざいや等でカット注文）</text>
+  <text x="525" y="543" font-size="12" font-family="Arial,sans-serif" fill="#4b5563">• 白砂（珪砂 #5号）2kg</text>
 </svg>

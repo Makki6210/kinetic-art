@@ -1,23 +1,128 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="960" height="420" viewBox="0 0 960 420">
-  <rect width="960" height="420" fill="#f0fdf4"/>
-  <text x="40" y="45" font-size="28" font-family="Arial" fill="#14532d">フェーズ3: CoreXYベルト確認イメージ</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="570" viewBox="0 0 960 570">
+  <rect width="960" height="570" fill="#f0fdf4"/>
+  <text x="480" y="36" text-anchor="middle" font-size="20" font-weight="bold" font-family="Arial,sans-serif" fill="#14532d">フェーズ3：CoreXYベルト経路と動作確認（上面図）</text>
 
-  <rect x="120" y="80" width="500" height="300" fill="#fff" stroke="#16a34a" stroke-width="4"/>
-  <circle cx="150" cy="110" r="18" fill="#166534"/>
-  <circle cx="590" cy="110" r="18" fill="#166534"/>
-  <circle cx="150" cy="350" r="18" fill="#166534"/>
-  <circle cx="590" cy="350" r="18" fill="#166534"/>
-  <line x1="150" y1="110" x2="590" y2="350" stroke="#22c55e" stroke-width="4"/>
-  <line x1="590" y1="110" x2="150" y2="350" stroke="#22c55e" stroke-width="4"/>
-  <rect x="340" y="200" width="60" height="60" fill="#bbf7d0" stroke="#16a34a"/>
-  <text x="338" y="235" font-size="14" font-family="Arial" fill="#14532d">Carriage</text>
+  <!-- ===== LEFT PANEL: Belt routing diagram (top view) ===== -->
+  <rect x="15" y="55" width="530" height="500" rx="10" fill="#fff" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="280" y="78" text-anchor="middle" font-size="14" font-weight="bold" font-family="Arial,sans-serif" fill="#14532d">① ベルト経路図（上から見た図）</text>
 
-  <rect x="650" y="90" width="250" height="290" rx="12" fill="#dcfce7" stroke="#22c55e"/>
-  <text x="675" y="125" font-size="20" font-family="Arial" fill="#14532d">確認ポイント</text>
-  <text x="675" y="160" font-size="16" font-family="Arial" fill="#14532d">✓ Xのみ直進</text>
-  <text x="675" y="190" font-size="16" font-family="Arial" fill="#14532d">✓ Yのみ直進</text>
-  <text x="675" y="220" font-size="16" font-family="Arial" fill="#14532d">✓ 斜め移動も軽い</text>
-  <text x="675" y="260" font-size="16" font-family="Arial" fill="#14532d">× 斜めに逃げる</text>
-  <text x="675" y="290" font-size="16" font-family="Arial" fill="#14532d">× 角で重くなる</text>
-  <text x="675" y="330" font-size="16" font-family="Arial" fill="#14532d">→ ベルト経路を再確認</text>
+  <!-- Frame outer border (V-Slot frame) -->
+  <rect x="65" y="95" width="460" height="430" rx="4" fill="none" stroke="#c0c0c0" stroke-width="3"/>
+
+  <!-- V-Slot labels -->
+  <text x="295" y="92" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#9ca3af">V-Slot 2020 フレーム（500mm）</text>
+
+  <!-- ===== Motor A: top-left ===== -->
+  <rect x="68" y="98" width="52" height="52" rx="3" fill="#ea580c" stroke="#c2410c" stroke-width="2"/>
+  <circle cx="94" cy="124" r="14" fill="#fb923c" stroke="#ea580c"/>
+  <circle cx="94" cy="124" r="6" fill="#fff"/>
+  <text x="94" y="167" text-anchor="middle" font-size="11" font-weight="bold" font-family="Arial,sans-serif" fill="#ea580c">Motor A</text>
+  <text x="94" y="180" text-anchor="middle" font-size="9" font-family="Arial,sans-serif" fill="#9a3412">（左前）</text>
+
+  <!-- ===== Motor B: top-right ===== -->
+  <rect x="472" y="98" width="52" height="52" rx="3" fill="#2563eb" stroke="#1d4ed8" stroke-width="2"/>
+  <circle cx="498" cy="124" r="14" fill="#60a5fa" stroke="#2563eb"/>
+  <circle cx="498" cy="124" r="6" fill="#fff"/>
+  <text x="498" y="167" text-anchor="middle" font-size="11" font-weight="bold" font-family="Arial,sans-serif" fill="#2563eb">Motor B</text>
+  <text x="498" y="180" text-anchor="middle" font-size="9" font-family="Arial,sans-serif" fill="#1e3a8a">（右前）</text>
+
+  <!-- ===== Corner idler pulleys ===== -->
+  <!-- Bottom-left idler -->
+  <circle cx="94" cy="490" r="14" fill="#d1d5db" stroke="#6b7280" stroke-width="2"/>
+  <circle cx="94" cy="490" r="5" fill="#9ca3af"/>
+  <text x="94" y="513" text-anchor="middle" font-size="9" font-family="Arial,sans-serif" fill="#6b7280">アイドラー</text>
+  <!-- Bottom-right idler -->
+  <circle cx="498" cy="490" r="14" fill="#d1d5db" stroke="#6b7280" stroke-width="2"/>
+  <circle cx="498" cy="490" r="5" fill="#9ca3af"/>
+  <text x="498" y="513" text-anchor="middle" font-size="9" font-family="Arial,sans-serif" fill="#6b7280">アイドラー</text>
+
+  <!-- Mid-right idler (for belt A crossover) -->
+  <circle cx="498" cy="305" r="10" fill="#fed7aa" stroke="#ea580c" stroke-width="1.5"/>
+  <circle cx="498" cy="305" r="4" fill="#fb923c"/>
+  <!-- Mid-left idler (for belt B crossover) -->
+  <circle cx="94" cy="305" r="10" fill="#bfdbfe" stroke="#2563eb" stroke-width="1.5"/>
+  <circle cx="94" cy="305" r="4" fill="#60a5fa"/>
+
+  <!-- ===== Carriage (center) ===== -->
+  <rect x="256" y="268" width="80" height="72" rx="6" fill="#4b5563" stroke="#1f2937" stroke-width="2"/>
+  <!-- Magnet indicator -->
+  <circle cx="296" cy="286" r="10" fill="#dc2626" stroke="#991b1b"/>
+  <text x="296" y="290" text-anchor="middle" font-size="8" font-weight="bold" font-family="Arial,sans-serif" fill="#fff">N</text>
+  <text x="296" y="316" text-anchor="middle" font-size="9" font-family="Arial,sans-serif" fill="#e5e7eb">X キャリッジ</text>
+  <text x="296" y="330" text-anchor="middle" font-size="9" font-family="Arial,sans-serif" fill="#9ca3af">+磁石</text>
+  <!-- V-wheel circles -->
+  <circle cx="260" cy="274" r="5" fill="#d1d5db" stroke="#9ca3af"/>
+  <circle cx="332" cy="274" r="5" fill="#d1d5db" stroke="#9ca3af"/>
+  <circle cx="260" cy="336" r="5" fill="#d1d5db" stroke="#9ca3af"/>
+  <circle cx="332" cy="336" r="5" fill="#d1d5db" stroke="#9ca3af"/>
+
+  <!-- ===== Belt A (orange) path ===== -->
+  <!-- Belt A: Motor A → along top → to carriage (upper attachment) → down right side → idler bottom-right → back along bottom → idler bottom-left → up to motor A -->
+  <!-- Simplified CoreXY Belt A path -->
+  <polyline points="108,124 296,124 296,268" stroke="#ea580c" stroke-width="3" fill="none" stroke-dasharray="6 3" opacity="0.85"/>
+  <polyline points="296,340 296,490 94,490 94,315" stroke="#ea580c" stroke-width="3" fill="none" stroke-dasharray="6 3" opacity="0.85"/>
+  <!-- Belt A connection right side: from carriage to right idler -->
+  <polyline points="336,305 488,305" stroke="#ea580c" stroke-width="3" fill="none" stroke-dasharray="6 3" opacity="0.85"/>
+  <polyline points="488,295 488,138 108,138" stroke="#ea580c" stroke-width="3" fill="none" stroke-dasharray="6 3" opacity="0.7"/>
+
+  <!-- ===== Belt B (blue) path ===== -->
+  <polyline points="484,124 296,124 296,268" stroke="#2563eb" stroke-width="3" fill="none" stroke-dasharray="6 3" opacity="0.85"/>
+  <polyline points="296,340 296,490 498,490 498,315" stroke="#2563eb" stroke-width="3" fill="none" stroke-dasharray="6 3" opacity="0.85"/>
+  <!-- Belt B left side crossover -->
+  <polyline points="256,305 104,305" stroke="#2563eb" stroke-width="3" fill="none" stroke-dasharray="6 3" opacity="0.85"/>
+  <polyline points="104,295 104,138 484,138" stroke="#2563eb" stroke-width="3" fill="none" stroke-dasharray="6 3" opacity="0.7"/>
+
+  <!-- Belt legend -->
+  <line x1="70" y1="535" x2="110" y2="535" stroke="#ea580c" stroke-width="3" stroke-dasharray="6 3"/>
+  <text x="116" y="539" font-size="11" font-family="Arial,sans-serif" fill="#ea580c">ベルト A（Motor A 担当）</text>
+  <line x1="270" y1="535" x2="310" y2="535" stroke="#2563eb" stroke-width="3" stroke-dasharray="6 3"/>
+  <text x="316" y="539" font-size="11" font-family="Arial,sans-serif" fill="#2563eb">ベルト B（Motor B 担当）</text>
+
+  <!-- ===== RIGHT PANEL: Movement explanation ===== -->
+  <rect x="560" y="55" width="385" height="500" rx="10" fill="#fff" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="752" y="78" text-anchor="middle" font-size="14" font-weight="bold" font-family="Arial,sans-serif" fill="#14532d">② 動作確認の方法</text>
+
+  <!-- X movement explanation -->
+  <rect x="575" y="90" width="355" height="110" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="1.5"/>
+  <text x="752" y="112" text-anchor="middle" font-size="13" font-weight="bold" font-family="Arial,sans-serif" fill="#c2410c">X 方向移動（左右）</text>
+  <text x="590" y="135" font-size="12" font-family="Arial,sans-serif" fill="#374151">Motor A ↻ 同方向</text>
+  <text x="752" y="135" text-anchor="middle" font-size="18" font-family="Arial,sans-serif" fill="#374151">＋</text>
+  <text x="810" y="135" font-size="12" font-family="Arial,sans-serif" fill="#374151">Motor B ↻ 同方向</text>
+  <text x="752" y="160" text-anchor="middle" font-size="22" font-family="Arial,sans-serif" fill="#ea580c">↔ キャリッジが左右に動く</text>
+  <text x="590" y="190" font-size="11" font-family="Arial,sans-serif" fill="#6b7280">G91; G1 X50 F500 → 右に50mm移動</text>
+
+  <!-- Y movement explanation -->
+  <rect x="575" y="215" width="355" height="110" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="752" y="237" text-anchor="middle" font-size="13" font-weight="bold" font-family="Arial,sans-serif" fill="#1d4ed8">Y 方向移動（前後）</text>
+  <text x="590" y="260" font-size="12" font-family="Arial,sans-serif" fill="#374151">Motor A ↻ 正転</text>
+  <text x="752" y="260" text-anchor="middle" font-size="18" font-family="Arial,sans-serif" fill="#374151">＋</text>
+  <text x="810" y="260" font-size="12" font-family="Arial,sans-serif" fill="#374151">Motor B ↺ 逆転</text>
+  <text x="752" y="285" text-anchor="middle" font-size="22" font-family="Arial,sans-serif" fill="#2563eb">↕ キャリッジが前後に動く</text>
+  <text x="590" y="315" font-size="11" font-family="Arial,sans-serif" fill="#6b7280">G91; G1 Y50 F500 → 奥に50mm移動</text>
+
+  <!-- Check points -->
+  <rect x="575" y="340" width="355" height="160" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="752" y="362" text-anchor="middle" font-size="13" font-weight="bold" font-family="Arial,sans-serif" fill="#166534">③ 合格基準（テストコマンド）</text>
+
+  <!-- Pass -->
+  <circle cx="592" cy="390" r="8" fill="#16a34a"/>
+  <text x="592" y="394" text-anchor="middle" font-size="10" font-weight="bold" font-family="Arial,sans-serif" fill="#fff">✓</text>
+  <text x="608" y="394" font-size="12" font-family="Arial,sans-serif" fill="#15803d">X方向のみ直進する（手で押してもスムーズ）</text>
+
+  <circle cx="592" cy="418" r="8" fill="#16a34a"/>
+  <text x="592" y="422" text-anchor="middle" font-size="10" font-weight="bold" font-family="Arial,sans-serif" fill="#fff">✓</text>
+  <text x="608" y="422" font-size="12" font-family="Arial,sans-serif" fill="#15803d">Y方向のみ直進する</text>
+
+  <circle cx="592" cy="446" r="8" fill="#16a34a"/>
+  <text x="592" y="450" text-anchor="middle" font-size="10" font-weight="bold" font-family="Arial,sans-serif" fill="#fff">✓</text>
+  <text x="608" y="450" font-size="12" font-family="Arial,sans-serif" fill="#15803d">斜め移動（G1 X30 Y30）も滑らか</text>
+
+  <!-- Fail -->
+  <circle cx="592" cy="476" r="8" fill="#dc2626"/>
+  <text x="592" y="480" text-anchor="middle" font-size="10" font-weight="bold" font-family="Arial,sans-serif" fill="#fff">✗</text>
+  <text x="608" y="480" font-size="12" font-family="Arial,sans-serif" fill="#dc2626">斜めに逃げる → ベルト経路の誤配線</text>
+
+  <!-- Key note -->
+  <rect x="575" y="513" width="355" height="35" rx="6" fill="#fef9c3" stroke="#ca8a04" stroke-width="1"/>
+  <text x="752" y="534" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#78350f">ベルト経路を間違えると斜めにしか動かない。プリントアウトして確認。</text>
 </svg>

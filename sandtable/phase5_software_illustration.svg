@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+  <rect width="960" height="540" fill="#f8fafc"/>
+  <text x="480" y="36" text-anchor="middle" font-size="20" font-weight="bold" font-family="Arial,sans-serif" fill="#1e293b">フェーズ5：ソフトウェア構成とデータフロー</text>
+
+  <!-- ===== TOP ROW: Data Sources ===== -->
+  <!-- tide736.net API -->
+  <rect x="30" y="65" width="160" height="80" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="110" y="93" text-anchor="middle" font-size="13" font-weight="bold" font-family="Arial,sans-serif" fill="#14532d">tide736.net</text>
+  <text x="110" y="112" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#166534">潮汐API（毎時取得）</text>
+  <text x="110" y="130" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#4ade80">JSON形式・日本沿岸736港</text>
+
+  <!-- OpenWeatherMap API -->
+  <rect x="30" y="165" width="160" height="80" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="110" y="193" text-anchor="middle" font-size="13" font-weight="bold" font-family="Arial,sans-serif" fill="#1e3a8a">OpenWeatherMap</text>
+  <text x="110" y="212" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#1d4ed8">天気API（3時間毎）</text>
+  <text x="110" y="230" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#60a5fa">天気状態・気温取得</text>
+
+  <!-- Arrows: APIs → RPi -->
+  <line x1="190" y1="105" x2="270" y2="185" stroke="#16a34a" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="190" y1="205" x2="270" y2="215" stroke="#2563eb" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="225" y="150" font-size="10" font-family="Arial,sans-serif" fill="#666">HTTP GET</text>
+
+  <!-- ===== CENTER: Raspberry Pi Python App ===== -->
+  <rect x="270" y="65" width="260" height="330" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="400" y="90" text-anchor="middle" font-size="14" font-weight="bold" font-family="Arial,sans-serif" fill="#14532d">Raspberry Pi 4</text>
+  <text x="400" y="108" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#166534">Python アプリケーション</text>
+
+  <!-- Module 1: Tide logic -->
+  <rect x="285" y="120" width="228" height="55" rx="5" fill="#bbf7d0" stroke="#4ade80" stroke-width="1"/>
+  <text x="399" y="143" text-anchor="middle" font-size="12" font-weight="bold" font-family="Arial,sans-serif" fill="#14532d">潮汐ロジック</text>
+  <text x="399" y="162" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#166534">潮位取得 → 上げ/下げ/満/干 判定</text>
+
+  <!-- Module 2: Pattern selector -->
+  <rect x="285" y="188" width="228" height="55" rx="5" fill="#a7f3d0" stroke="#10b981" stroke-width="1"/>
+  <text x="399" y="211" text-anchor="middle" font-size="12" font-weight="bold" font-family="Arial,sans-serif" fill="#065f46">パターン選択ロジック</text>
+  <text x="399" y="230" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#047857">潮汐状態 × 天気 → Gコードファイルを選択</text>
+
+  <!-- Module 3: GRBL sender -->
+  <rect x="285" y="256" width="228" height="55" rx="5" fill="#fde68a" stroke="#f59e0b" stroke-width="1"/>
+  <text x="399" y="279" text-anchor="middle" font-size="12" font-weight="bold" font-family="Arial,sans-serif" fill="#78350f">GRBLシリアル送信</text>
+  <text x="399" y="298" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#92400e">pyserial → /dev/ttyUSB0 → Gコード行を順送</text>
+
+  <!-- Module 4: LED control -->
+  <rect x="285" y="324" width="228" height="55" rx="5" fill="#e9d5ff" stroke="#9333ea" stroke-width="1"/>
+  <text x="399" y="347" text-anchor="middle" font-size="12" font-weight="bold" font-family="Arial,sans-serif" fill="#581c87">NeoPixel LED制御</text>
+  <text x="399" y="366" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#7e22ce">rpi_ws281x → 潮汐状態で色・輝度を変化</text>
+
+  <!-- ===== Sandify pattern library (bottom-center) ===== -->
+  <rect x="270" y="415" width="260" height="100" rx="8" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.5"/>
+  <text x="400" y="438" text-anchor="middle" font-size="12" font-weight="bold" font-family="Arial,sans-serif" fill="#78350f">Sandify パターンライブラリ</text>
+  <text x="400" y="456" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#92400e">事前に sandify.org で生成した Gコードファイル</text>
+  <!-- Pattern categories -->
+  <rect x="282" y="465" width="55" height="18" rx="3" fill="#dbeafe" stroke="#2563eb"/>
+  <text x="309" y="478" text-anchor="middle" font-size="9" font-family="Arial,sans-serif" fill="#1e40af">大渦巻き</text>
+  <rect x="344" y="465" width="55" height="18" rx="3" fill="#d1fae5" stroke="#16a34a"/>
+  <text x="371" y="478" text-anchor="middle" font-size="9" font-family="Arial,sans-serif" fill="#065f46">細密波紋</text>
+  <rect x="406" y="465" width="42" height="18" rx="3" fill="#fde68a" stroke="#ca8a04"/>
+  <text x="427" y="478" text-anchor="middle" font-size="9" font-family="Arial,sans-serif" fill="#78350f">流線</text>
+  <rect x="455" y="465" width="55" height="18" rx="3" fill="#fee2e2" stroke="#dc2626"/>
+  <text x="482" y="478" text-anchor="middle" font-size="9" font-family="Arial,sans-serif" fill="#991b1b">枯山水</text>
+  <!-- Arrow: library → pattern selector -->
+  <line x1="400" y1="415" x2="400" y2="395" stroke="#ca8a04" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <polygon points="396,416 404,416 400,408" fill="#ca8a04"/>
+  <text x="410" y="410" font-size="9" font-family="Arial,sans-serif" fill="#ca8a04">読込み</text>
+
+  <!-- ===== RIGHT: Outputs ===== -->
+  <!-- GRBL / Arduino -->
+  <rect x="590" y="65" width="170" height="90" rx="8" fill="#e0e7ff" stroke="#6366f1" stroke-width="2"/>
+  <text x="675" y="93" text-anchor="middle" font-size="13" font-weight="bold" font-family="Arial,sans-serif" fill="#312e81">Arduino + GRBL</text>
+  <text x="675" y="112" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#4338ca">Gコード受信</text>
+  <text x="675" y="130" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#6366f1">CNC Shield + TMC2209</text>
+
+  <!-- Motors -->
+  <rect x="590" y="175" width="170" height="70" rx="8" fill="#f3f4f6" stroke="#6b7280" stroke-width="1.5"/>
+  <text x="675" y="201" text-anchor="middle" font-size="13" font-weight="bold" font-family="Arial,sans-serif" fill="#374151">NEMA17 × 2</text>
+  <text x="675" y="222" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#6b7280">CoreXY 可動</text>
+
+  <!-- Sand table (result) -->
+  <rect x="590" y="265" width="170" height="80" rx="8" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+  <text x="675" y="293" text-anchor="middle" font-size="13" font-weight="bold" font-family="Arial,sans-serif" fill="#92400e">砂紋描画</text>
+  <!-- Ball -->
+  <circle cx="640" cy="320" r="8" fill="#c0c0c0" stroke="#888"/>
+  <!-- Sand path -->
+  <path d="M610,325 Q635,315 660,320 Q680,325 700,318 Q720,312 745,320" stroke="#c4ad8a" stroke-width="2" fill="none"/>
+  <text x="675" y="337" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#a16207">ボールが砂上にパターンを描く</text>
+
+  <!-- NeoPixel LEDs -->
+  <rect x="590" y="365" width="170" height="70" rx="8" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="675" y="390" text-anchor="middle" font-size="13" font-weight="bold" font-family="Arial,sans-serif" fill="#4c1d95">NeoPixel LED</text>
+  <circle cx="620" cy="413" r="6" fill="#003366"/>
+  <circle cx="638" cy="413" r="6" fill="#0066FF"/>
+  <circle cx="656" cy="413" r="6" fill="#0088FF"/>
+  <circle cx="674" cy="413" r="6" fill="#c2b280"/>
+  <circle cx="692" cy="413" r="6" fill="#FF6B35"/>
+  <text x="675" y="428" text-anchor="middle" font-size="9" font-family="Arial,sans-serif" fill="#6d28d9">潮汐状態で色が変わる</text>
+
+  <!-- Web UI (far right) -->
+  <rect x="790" y="200" width="155" height="110" rx="8" fill="#ecfdf5" stroke="#059669" stroke-width="1.5"/>
+  <text x="867" y="224" text-anchor="middle" font-size="12" font-weight="bold" font-family="Arial,sans-serif" fill="#065f46">Flask Web UI</text>
+  <text x="867" y="244" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#047857">スマホから操作可能</text>
+  <text x="800" y="265" font-size="10" font-family="Arial,sans-serif" fill="#10b981">• 現在の潮位表示</text>
+  <text x="800" y="281" font-size="10" font-family="Arial,sans-serif" fill="#10b981">• 手動パターン選択</text>
+  <text x="800" y="297" font-size="10" font-family="Arial,sans-serif" fill="#10b981">• LED明るさ調整</text>
+
+  <!-- Arrows: RPi → outputs -->
+  <line x1="530" y1="148" x2="590" y2="130" stroke="#16a34a" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="560" y="132" font-size="9" font-family="Arial,sans-serif" fill="#666">USB Gcode</text>
+  <line x1="590" y1="155" x2="590" y2="175" stroke="#6366f1" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="590" y1="245" x2="665" y2="265" stroke="#d97706" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="530" y1="350" x2="590" y2="390" stroke="#7c3aed" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="530" y1="250" x2="790" y2="248" stroke="#059669" stroke-width="1.5" stroke-dasharray="5 3" marker-end="url(#arr)"/>
+  <text x="680" y="244" font-size="9" font-family="Arial,sans-serif" fill="#059669">HTTP</text>
+
+  <!-- Arrow definitions -->
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="2" stroke-linecap="round"/>
+    </marker>
+  </defs>
+
+  <!-- Bottom note: systemd -->
+  <rect x="30" y="490" width="900" height="40" rx="6" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1"/>
+  <text x="480" y="508" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#475569">systemd サービスとして登録 → Raspberry Pi 起動時に自動で潮汐連動が開始する</text>
+  <text x="480" y="524" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#94a3b8">sudo systemctl enable sandtable.service</text>
+</svg>

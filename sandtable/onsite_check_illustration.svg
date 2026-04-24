@@ -1,26 +1,136 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="960" height="520" viewBox="0 0 960 520">
-  <rect width="960" height="520" fill="#ffffff"/>
-  <text x="40" y="45" font-size="28" font-family="Arial" fill="#111827">現場チェック図（成功 / 失敗 / 記録）</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="560" viewBox="0 0 960 560">
+  <rect width="960" height="560" fill="#ffffff"/>
+  <text x="480" y="36" text-anchor="middle" font-size="20" font-weight="bold" font-family="Arial,sans-serif" fill="#111827">現場チェック図：成功・失敗のサインと記録</text>
 
-  <rect x="50" y="90" width="270" height="380" rx="12" fill="#ecfdf5" stroke="#16a34a"/>
-  <text x="75" y="125" font-size="20" font-family="Arial" fill="#166534">成功の見た目</text>
-  <text x="75" y="165" font-size="16" font-family="Arial" fill="#166534">• 線幅が一定</text>
-  <text x="75" y="195" font-size="16" font-family="Arial" fill="#166534">• 軌跡が途切れない</text>
-  <text x="75" y="225" font-size="16" font-family="Arial" fill="#166534">• 局所的な砂山なし</text>
-  <text x="75" y="255" font-size="16" font-family="Arial" fill="#166534">• 異音の周期なし</text>
+  <!-- ===== COLUMN 1: Success ===== -->
+  <rect x="15" y="58" width="290" height="490" rx="10" fill="#ecfdf5" stroke="#16a34a" stroke-width="2"/>
+  <rect x="15" y="58" width="290" height="40" rx="10" fill="#16a34a"/>
+  <text x="160" y="84" text-anchor="middle" font-size="15" font-weight="bold" font-family="Arial,sans-serif" fill="#fff">✓ 成功の見た目</text>
 
-  <rect x="345" y="90" width="270" height="380" rx="12" fill="#fef2f2" stroke="#dc2626"/>
-  <text x="370" y="125" font-size="20" font-family="Arial" fill="#991b1b">失敗の見た目</text>
-  <text x="370" y="165" font-size="16" font-family="Arial" fill="#991b1b">• 一部だけ線が太い</text>
-  <text x="370" y="195" font-size="16" font-family="Arial" fill="#991b1b">• 角でズレる</text>
-  <text x="370" y="225" font-size="16" font-family="Arial" fill="#991b1b">• 長時間で劣化</text>
-  <text x="370" y="255" font-size="16" font-family="Arial" fill="#991b1b">• 跳ね/停止が発生</text>
+  <!-- Good pattern 1: Uniform line width -->
+  <rect x="30" y="108" width="260" height="100" rx="6" fill="#fff" stroke="#86efac" stroke-width="1"/>
+  <text x="160" y="127" text-anchor="middle" font-size="11" font-weight="bold" font-family="Arial,sans-serif" fill="#166534">線幅が均一なスパイラル</text>
+  <!-- Good spiral drawing -->
+  <path d="M120,170 Q125,158 138,155 Q155,152 162,165 Q168,178 155,187 Q138,195 124,188 Q108,178 112,160 Q117,138 140,133 Q168,128 178,150 Q186,170 175,188 Q160,205 138,208" stroke="#c4ad8a" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <circle cx="138" cy="208" r="6" fill="#c0c0c0" stroke="#888"/>
+  <!-- Good label -->
+  <text x="210" y="162" font-size="10" font-family="Arial,sans-serif" fill="#166534">線幅</text>
+  <text x="210" y="175" font-size="10" font-family="Arial,sans-serif" fill="#166534">一定</text>
+  <line x1="200" y1="165" x2="155" y2="165" stroke="#16a34a" stroke-width="1" stroke-dasharray="3 2"/>
 
-  <rect x="640" y="90" width="270" height="380" rx="12" fill="#eff6ff" stroke="#2563eb"/>
-  <text x="665" y="125" font-size="20" font-family="Arial" fill="#1e3a8a">記録ログ</text>
-  <text x="665" y="165" font-size="16" font-family="Arial" fill="#1e3a8a">• 日付</text>
-  <text x="665" y="195" font-size="16" font-family="Arial" fill="#1e3a8a">• 砂厚(mm)</text>
-  <text x="665" y="225" font-size="16" font-family="Arial" fill="#1e3a8a">• 磁石-アクリル距離(mm)</text>
-  <text x="665" y="255" font-size="16" font-family="Arial" fill="#1e3a8a">• GRBL主要値</text>
-  <text x="665" y="285" font-size="16" font-family="Arial" fill="#1e3a8a">• パターン名 / 症状</text>
+  <!-- Good item list -->
+  <text x="35" y="228" font-size="12" font-weight="bold" font-family="Arial,sans-serif" fill="#15803d">チェック基準</text>
+  <text x="35" y="250" font-size="11" font-family="Arial,sans-serif" fill="#166534">✓ 線幅が全域で 3〜5mm の範囲に収まる</text>
+  <text x="35" y="272" font-size="11" font-family="Arial,sans-serif" fill="#166534">✓ 軌跡が一度も途切れない</text>
+  <text x="35" y="294" font-size="11" font-family="Arial,sans-serif" fill="#166534">✓ ボールが砂面からはみ出さない</text>
+  <text x="35" y="316" font-size="11" font-family="Arial,sans-serif" fill="#166534">✓ コーナーで位置ずれが 2mm 以内</text>
+  <text x="35" y="338" font-size="11" font-family="Arial,sans-serif" fill="#166534">✓ 連続1時間で同品質を保てる</text>
+  <text x="35" y="360" font-size="11" font-family="Arial,sans-serif" fill="#166534">✓ 静粛性：会話を妨げない音量</text>
+  <text x="35" y="382" font-size="11" font-family="Arial,sans-serif" fill="#166534">✓ 磁石異音（カチン）が 0 回/分</text>
+  <text x="35" y="404" font-size="11" font-family="Arial,sans-serif" fill="#166534">✓ モーター温度が手で触れる範囲</text>
+
+  <!-- Sound indicator -->
+  <rect x="30" y="420" width="260" height="45" rx="6" fill="#d1fae5" stroke="#4ade80" stroke-width="1"/>
+  <text x="160" y="440" text-anchor="middle" font-size="11" font-weight="bold" font-family="Arial,sans-serif" fill="#065f46">合格サウンドイメージ</text>
+  <text x="160" y="458" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#047857">「シュ…シュ…」（砂をなでる音のみ）</text>
+
+  <!-- Long run check -->
+  <rect x="30" y="475" width="260" height="62" rx="6" fill="#bbf7d0" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="160" y="494" text-anchor="middle" font-size="12" font-weight="bold" font-family="Arial,sans-serif" fill="#14532d">24時間連続運転ゲート</text>
+  <text x="160" y="512" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#166534">• ボール脱落 0 回</text>
+  <text x="160" y="528" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#166534">• APIエラー 0 回  • RPiクラッシュ 0 回</text>
+
+  <!-- ===== COLUMN 2: Failure ===== -->
+  <rect x="335" y="58" width="290" height="490" rx="10" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <rect x="335" y="58" width="290" height="40" rx="10" fill="#dc2626"/>
+  <text x="480" y="84" text-anchor="middle" font-size="15" font-weight="bold" font-family="Arial,sans-serif" fill="#fff">✗ 失敗のサインと対処</text>
+
+  <!-- Bad pattern 1: Broken line -->
+  <rect x="350" y="108" width="260" height="100" rx="6" fill="#fff" stroke="#fca5a5" stroke-width="1"/>
+  <text x="480" y="127" text-anchor="middle" font-size="11" font-weight="bold" font-family="Arial,sans-serif" fill="#991b1b">途切れパターン</text>
+  <!-- Broken line drawing -->
+  <path d="M370,165 Q385,155 400,158" stroke="#c4ad8a" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M415,170 Q430,160 445,163" stroke="#c4ad8a" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M460,168 Q480,155 500,162" stroke="#c4ad8a" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <text x="520" y="166" font-size="10" font-family="Arial,sans-serif" fill="#dc2626">← 途切れ</text>
+
+  <!-- Bad symptoms list -->
+  <text x="350" y="230" font-size="12" font-weight="bold" font-family="Arial,sans-serif" fill="#991b1b">症状と直接原因</text>
+
+  <rect x="350" y="242" width="260" height="38" rx="4" fill="#fef2f2" stroke="#fca5a5" stroke-width="0.5"/>
+  <text x="358" y="258" font-size="11" font-weight="bold" font-family="Arial,sans-serif" fill="#b91c1c">線が途切れる</text>
+  <text x="358" y="274" font-size="10" font-family="Arial,sans-serif" fill="#7f1d1d">→ 磁石距離を縮める（アクリルに近づける）</text>
+
+  <rect x="350" y="286" width="260" height="38" rx="4" fill="#fef2f2" stroke="#fca5a5" stroke-width="0.5"/>
+  <text x="358" y="302" font-size="11" font-weight="bold" font-family="Arial,sans-serif" fill="#b91c1c">一部だけ線が太い / 細い</text>
+  <text x="358" y="318" font-size="10" font-family="Arial,sans-serif" fill="#7f1d1d">→ テーブルが傾いている → 水平調整</text>
+
+  <rect x="350" y="330" width="260" height="38" rx="4" fill="#fef2f2" stroke="#fca5a5" stroke-width="0.5"/>
+  <text x="358" y="346" font-size="11" font-weight="bold" font-family="Arial,sans-serif" fill="#b91c1c">コーナーで必ずずれる</text>
+  <text x="358" y="362" font-size="10" font-family="Arial,sans-serif" fill="#7f1d1d">→ ベルト張力が左右不均等 → 再調整</text>
+
+  <rect x="350" y="374" width="260" height="38" rx="4" fill="#fef2f2" stroke="#fca5a5" stroke-width="0.5"/>
+  <text x="358" y="390" font-size="11" font-weight="bold" font-family="Arial,sans-serif" fill="#b91c1c">長時間で品質が劣化する</text>
+  <text x="358" y="406" font-size="10" font-family="Arial,sans-serif" fill="#7f1d1d">→ ベルト熱伸び → 1ヶ月毎に点検</text>
+
+  <rect x="350" y="418" width="260" height="38" rx="4" fill="#fef2f2" stroke="#fca5a5" stroke-width="0.5"/>
+  <text x="358" y="434" font-size="11" font-weight="bold" font-family="Arial,sans-serif" fill="#b91c1c">「カチン」という音が出る</text>
+  <text x="358" y="450" font-size="10" font-family="Arial,sans-serif" fill="#7f1d1d">→ 磁石が砂底（アクリル）に当たっている</text>
+
+  <rect x="350" y="462" width="260" height="38" rx="4" fill="#fef2f2" stroke="#fca5a5" stroke-width="0.5"/>
+  <text x="358" y="478" font-size="11" font-weight="bold" font-family="Arial,sans-serif" fill="#b91c1c">砂が一方に偏る</text>
+  <text x="358" y="494" font-size="10" font-family="Arial,sans-serif" fill="#7f1d1d">→ 水平不足 or クリアパターン後に再均し</text>
+
+  <rect x="350" y="506" width="260" height="36" rx="4" fill="#fee2e2" stroke="#dc2626" stroke-width="0.5"/>
+  <text x="480" y="522" text-anchor="middle" font-size="10" font-weight="bold" font-family="Arial,sans-serif" fill="#991b1b">ボールが動かなくなったら</text>
+  <text x="480" y="537" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#7f1d1d">手でボールを中央へ→ホーミング→再試行</text>
+
+  <!-- ===== COLUMN 3: Log ===== -->
+  <rect x="655" y="58" width="290" height="490" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <rect x="655" y="58" width="290" height="40" rx="10" fill="#2563eb"/>
+  <text x="800" y="84" text-anchor="middle" font-size="15" font-weight="bold" font-family="Arial,sans-serif" fill="#fff">📋 調整ログ（記録推奨）</text>
+
+  <!-- Log form -->
+  <text x="670" y="120" font-size="12" font-weight="bold" font-family="Arial,sans-serif" fill="#1e3a8a">記録すべき項目</text>
+  <text x="670" y="140" font-size="10" font-family="Arial,sans-serif" fill="#6b7280">（毎回調整後に記録しておくと再現が楽）</text>
+
+  <!-- Log fields -->
+  <rect x="665" y="150" width="268" height="30" rx="4" fill="#fff" stroke="#bfdbfe" stroke-width="1"/>
+  <text x="674" y="165" font-size="10" font-weight="bold" font-family="Arial,sans-serif" fill="#1e40af">日付・時刻：</text>
+  <line x1="745" y1="168" x2="925" y2="168" stroke="#bfdbfe" stroke-width="1" stroke-dasharray="3 2"/>
+
+  <rect x="665" y="186" width="268" height="30" rx="4" fill="#fff" stroke="#bfdbfe" stroke-width="1"/>
+  <text x="674" y="201" font-size="10" font-weight="bold" font-family="Arial,sans-serif" fill="#1e40af">砂厚（mm）：</text>
+  <line x1="748" y1="204" x2="925" y2="204" stroke="#bfdbfe" stroke-width="1" stroke-dasharray="3 2"/>
+
+  <rect x="665" y="222" width="268" height="30" rx="4" fill="#fff" stroke="#bfdbfe" stroke-width="1"/>
+  <text x="674" y="237" font-size="10" font-weight="bold" font-family="Arial,sans-serif" fill="#1e40af">磁石↔アクリル（mm）：</text>
+  <line x1="800" y1="240" x2="925" y2="240" stroke="#bfdbfe" stroke-width="1" stroke-dasharray="3 2"/>
+
+  <rect x="665" y="258" width="268" height="30" rx="4" fill="#fff" stroke="#bfdbfe" stroke-width="1"/>
+  <text x="674" y="273" font-size="10" font-weight="bold" font-family="Arial,sans-serif" fill="#1e40af">GRBL $110（X速度）：</text>
+  <line x1="793" y1="276" x2="925" y2="276" stroke="#bfdbfe" stroke-width="1" stroke-dasharray="3 2"/>
+
+  <rect x="665" y="294" width="268" height="30" rx="4" fill="#fff" stroke="#bfdbfe" stroke-width="1"/>
+  <text x="674" y="309" font-size="10" font-weight="bold" font-family="Arial,sans-serif" fill="#1e40af">GRBL $120（加速度）：</text>
+  <line x1="795" y1="312" x2="925" y2="312" stroke="#bfdbfe" stroke-width="1" stroke-dasharray="3 2"/>
+
+  <rect x="665" y="330" width="268" height="30" rx="4" fill="#fff" stroke="#bfdbfe" stroke-width="1"/>
+  <text x="674" y="345" font-size="10" font-weight="bold" font-family="Arial,sans-serif" fill="#1e40af">使用パターン名：</text>
+  <line x1="766" y1="348" x2="925" y2="348" stroke="#bfdbfe" stroke-width="1" stroke-dasharray="3 2"/>
+
+  <rect x="665" y="366" width="268" height="30" rx="4" fill="#fff" stroke="#bfdbfe" stroke-width="1"/>
+  <text x="674" y="381" font-size="10" font-weight="bold" font-family="Arial,sans-serif" fill="#1e40af">症状・気になった点：</text>
+  <line x1="795" y1="384" x2="925" y2="384" stroke="#bfdbfe" stroke-width="1" stroke-dasharray="3 2"/>
+
+  <!-- Maintenance schedule -->
+  <rect x="665" y="408" width="268" height="130" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="1"/>
+  <text x="800" y="426" text-anchor="middle" font-size="12" font-weight="bold" font-family="Arial,sans-serif" fill="#1e3a8a">定期メンテナンス</text>
+
+  <text x="674" y="448" font-size="11" font-family="Arial,sans-serif" fill="#1e40af">【毎週】砂を目視確認・ゴミ除去</text>
+  <text x="674" y="466" font-size="11" font-family="Arial,sans-serif" fill="#1e40af">【月1回】ベルト張力点検・調整</text>
+  <text x="674" y="484" font-size="11" font-family="Arial,sans-serif" fill="#1e40af">【月1回】V-ホイールのガタ確認</text>
+  <text x="674" y="502" font-size="11" font-family="Arial,sans-serif" fill="#1e40af">【2ヶ月毎】砂をふるいにかけ交換</text>
+  <text x="674" y="520" font-size="11" font-family="Arial,sans-serif" fill="#1e40af">【半年毎】SDカードバックアップ</text>
+  <text x="674" y="538" font-size="11" font-family="Arial,sans-serif" fill="#1e40af">【随時】 ログに記録して最適値を保存</text>
 </svg>
